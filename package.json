@@ -1,0 +1,24 @@
+{
+  "name": "helplocalbiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel build client/index.html; node ./serve.js",
+    "dev": "parcel src/index.html",
+  },
+  "keywords": [],
+  "author": "Karan Rajpal",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3",
+    "typescript-fsa": "^3.0.0"
+  }
+}
