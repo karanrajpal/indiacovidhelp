@@ -1,5 +1,4 @@
 // Application level styles
-// Code style hint: Consider using BEM (http://getbem.com/introduction/) for your app
 
 .landing {
     height: 100vh;
@@ -26,6 +25,10 @@
         }
     }
 
+    &__content {
+        margin-top: 100px;
+    }
+
     .payment-card {
         padding: 20px;
         background-color: white;
@@ -34,8 +37,8 @@
         color: #550033;
     }
 
-    &__content {
-        margin-top: 100px;
+    .payment-options {
+        margin-top: 30px;
     }
 
     .payment-option {
@@ -51,6 +54,6 @@
     .pay-button {
         margin-left: auto;
         margin-right: 0;
-        width: 20%;
+        display: block;
     }
 }

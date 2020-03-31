@@ -20,11 +20,7 @@ const Landing = (props: ComponentOnePropsType) => (
                     In times of crisis, a community must come together. Although, it's challenging to determine which asks for help are truly genuine. That's why we've curated a list of verified local businesses that need help now. Donate to our community fund or find a specific business below.
                 </p>
             </div>
-            <div className="right payment-card">
-                <h2>IndiaCovidHelp Community Fund</h2>
-                <span>Your donation here (100% of it) will be split evenly between three random businesses. After distribution, we'll email you details on who you helped. If you have a special request, please note it!</span>
-                <PaymentMaker />
-            </div>
+            <PaymentMaker className="right" />
         </div>
     </div>
 );
