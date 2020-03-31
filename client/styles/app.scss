@@ -1,0 +1,32 @@
+// Application level styles
+// Code style hint: Consider using BEM (http://getbem.com/introduction/) for your app
+
+.landing {
+    height: 100vh;
+    background-color: #2b38e1;
+    color: white;
+    padding: 50px;
+
+    .menu {
+        background: #2b38e1 !important;
+    }
+    
+    nav {
+        position: unset;
+        background-color: unset;
+        border-bottom: unset;
+        box-shadow: unset;
+
+        .mainButton {
+            padding: 15px;
+            background: white;
+            color: #2b38e1;
+            // font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    &__content {
+        margin-top: 100px;
+    }
+}
