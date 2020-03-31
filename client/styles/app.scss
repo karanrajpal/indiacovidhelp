@@ -5,7 +5,7 @@
     height: 100vh;
     background-color: #2b38e1;
     color: white;
-    padding: 50px;
+    padding: 70px;
 
     .menu {
         background: #2b38e1 !important;
@@ -26,7 +26,31 @@
         }
     }
 
+    .payment-card {
+        padding: 20px;
+        background-color: white;
+        min-height: 300px;
+        border: 1px solid #550033;
+        color: #550033;
+    }
+
     &__content {
         margin-top: 100px;
+    }
+
+    .payment-option {
+        button {
+            background: transparent;
+            border: 1px solid red;
+            color: red;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .pay-button {
+        margin-left: auto;
+        margin-right: 0;
+        width: 20%;
     }
 }
