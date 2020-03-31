@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel build client/index.html; node ./serve.js",
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html"
   },
   "keywords": [],
   "author": "Karan Rajpal",
