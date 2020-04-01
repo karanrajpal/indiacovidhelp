@@ -1,10 +1,14 @@
 // Application level styles
 
 .landing {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #2b38e1;
     color: white;
     padding: 70px;
+
+    @media screen and (max-width: 400px) {
+        padding: 35px;
+    }
 
     .menu {
         background: #2b38e1 !important;
@@ -26,7 +30,23 @@
     }
 
     &__content {
+        align-items: center;
         margin-top: 100px;
+        @media screen and (max-width: 400px) {
+            margin-top: 30px;
+        }
+    }
+
+    .left {
+        padding-right: 40px;
+        @media screen and (max-width: 400px) {
+            padding-right: unset;
+            padding-bottom: 40px;
+        }
+    }
+
+    .project-description {
+        font-size: 16px;
     }
 
     .payment-card {
@@ -49,6 +69,10 @@
             display: block;
             width: 100%;
         }
+    }
+
+    .payment-description {
+        font-size: 16px;
     }
 
     .pay-button {

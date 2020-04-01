@@ -13,14 +13,14 @@ type ComponentOnePropsType = {
 const Landing = (props: ComponentOnePropsType) => (
     <div className='landing'>
         <Header />
-        <div className="landing__content flex one two-600">
-            <div className="left">
-                <h1>Save your neighborhood by donating to local businesses impacted by COVID-19.</h1>
-                <p>
+        <div className='landing__content flex one two-600'>
+            <div className='left'>
+                <h2>Save your neighborhood by donating to local businesses impacted by COVID-19.</h2>
+                <span className='project-description'>
                     In times of crisis, a community must come together. Although, it's challenging to determine which asks for help are truly genuine. That's why we've curated a list of verified local businesses that need help now. Donate to our community fund or find a specific business below.
-                </p>
+                </span>
             </div>
-            <PaymentMaker className="right" />
+            <PaymentMaker className='right' />
         </div>
     </div>
 );
