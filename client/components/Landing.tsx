@@ -1,16 +1,9 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { setRandomName } from '../state/actions';
 import { Link } from 'react-router-dom';
 import { Header } from './Header';
 import { PaymentMaker } from './PaymentMaker';
 
-type ComponentOnePropsType = {
-    name: string;
-    setRandomName: () => {};
-};
-
-const Landing = (props: ComponentOnePropsType) => (
+export const Landing = () => (
     <div className='landing'>
         <Header />
         <div className='landing__content flex one two-600'>
@@ -24,16 +17,3 @@ const Landing = (props: ComponentOnePropsType) => (
         </div>
     </div>
 );
-
-export const ConnectedLanding = connect(
-    (state) => ({
-        name: state.randomName,
-    }),
-    (dispatch) => ({
-        setRandomName: () => {
-            const nameList = ['Astro Boy', 'Golden Girl', 'Annoying Frog', 'Peaceful Blob'];
-            const randomName = nameList[Math.floor(Math.random() * nameList.length)];
-            dispatch(setRandomName({ randomName }));
-        },
-    })
-)(Landing);
