@@ -9,7 +9,7 @@ export const Header = () => (
             </a>
 
             <input id="bmenub" type="checkbox" className="show" />
-            <label htmlFor="bmenub" className="burger pseudo button">menu</label>
+            <label htmlFor="bmenub" className="burger pseudo button">SOS Menu</label>
             <div className="menu">
                 <a
                     target="_blank"
