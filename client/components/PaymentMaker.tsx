@@ -3,7 +3,7 @@ import * as React from 'react';
 export const amounts = [500, 2000, 5000, 10000];
 
 type PaymentMakerProps = {
-    className: string;
+    className?: string;
 };
 
 export const PaymentMaker = ({ className = '' }: PaymentMakerProps) => (

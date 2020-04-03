@@ -27,7 +27,10 @@ class LandingPage extends React.Component<LandingPageProps> {
 
     render() {
         return (
-            <Landing />
+            <div className='landing-page flex one center'>
+                <Header />
+                <Landing />
+            </div>
         );
     }
 }

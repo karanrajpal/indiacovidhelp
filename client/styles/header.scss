@@ -1,0 +1,20 @@
+nav.header {
+    color: white;
+    position: unset;
+    background-color: unset;
+    border-bottom: unset;
+    box-shadow: unset;
+    // max-width: 960px;
+
+    .menu {
+        background: #2b38e1 !important;
+    }
+    
+    .mainButton {
+        padding: 15px;
+        background: white;
+        color: #2b38e1;
+        // font-weight: bold;
+        text-transform: uppercase;
+    }
+}

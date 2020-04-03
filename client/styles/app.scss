@@ -1,51 +1,34 @@
 // Application level styles
 
-.landing {
-    min-height: 100vh;
+.landing-page {
     background-color: #2b38e1;
-    color: white;
-    padding: 70px;
+    padding: 70px 70px 240px;
+    min-height: auto;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 600px) {
         padding: 35px;
     }
+}
 
-    .menu {
-        background: #2b38e1 !important;
-    }
-    
-    nav {
-        position: unset;
-        background-color: unset;
-        border-bottom: unset;
-        box-shadow: unset;
-
-        .mainButton {
-            padding: 15px;
-            background: white;
-            color: #2b38e1;
-            // font-weight: bold;
-            text-transform: uppercase;
-        }
-    }
+.landing {
+    color: white;
+    // max-width: 1080px;
 
     &__content {
         align-items: center;
         margin-top: 100px;
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 600px) {
             margin-top: 30px;
         }
     }
 
-    .left {
-        padding-right: 40px;
-        @media screen and (max-width: 400px) {
-            padding-right: unset;
+    &__description {
+        @media screen and (max-width: 600px) {
             padding-bottom: 40px;
         }
     }
 
-    .project-description {
+    &__description-subtitle {
         font-size: 16px;
     }
 
