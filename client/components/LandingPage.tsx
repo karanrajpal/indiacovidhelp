@@ -8,10 +8,16 @@ import { Landing } from './Landing';
 import { googleSheetService } from '../services/google-sheet-service';
 
 export type Business = {
+    timestamp?: string;
     name: string;
-    imageUrl: string;
-    descriptin: string;
     location: string;
+    ownerName: string;
+    email: string;
+    phoneNumber: string;
+    description: string;
+    links: string[];
+    imageUrl: string;
+    verified: boolean;
 };
 
 type LandingPageProps = {
