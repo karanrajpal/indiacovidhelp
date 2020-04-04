@@ -8,9 +8,9 @@ import {
     setBusinesses,
 } from './actions';
 import { Action } from 'redux';
-import { Business } from '../components/LandingPage';
+import { Business } from '../components/BusinessList';
 
-type AppReducerType = {
+export type AppReducerType = {
     businesses: Business[];
     randomBoolean: boolean;
 };

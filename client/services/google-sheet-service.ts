@@ -23,15 +23,15 @@ class GoogleSheetService {
 
     private fieldToColumnNumberMapping: { [name in keyof Business]: number } = {
         timestamp: 0,
-        name: 2,
-        location: 3,
-        ownerName: 4,
-        email: 5,
-        phoneNumber: 6,
-        description: 7,
-        links: 8,
-        imageUrl: 9,
-        verified: 10,
+        name: 1,
+        location: 2,
+        ownerName: 3,
+        email: 4,
+        phoneNumber: 5,
+        description: 6,
+        links: 7,
+        imageUrl: 8,
+        verified: 9,
     };
 
     private formatGoogleSheetResponse(sheetData): Business[] {

@@ -1,12 +1,21 @@
 // Application level styles
 
 .landing-page {
-    background-color: #2b38e1;
-    padding: 70px 70px 240px;
-    min-height: auto;
+    section.opening {
+        background-color: #2b38e1;
+        padding: 70px 70px 240px;
+        // min-height: auto;
+    
+        @media screen and (max-width: 600px) {
+            padding: 35px;
+        }
+    }
+    section.main {
+        padding: 70px 70px 240px;
 
-    @media screen and (max-width: 600px) {
-        padding: 35px;
+        @media screen and (max-width: 600px) {
+            padding: 35px;
+        }
     }
 }
 
