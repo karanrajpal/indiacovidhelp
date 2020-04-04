@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { AppReducerType } from '../state/AppReducer';
 
+import '../styles/business-list.scss';
+
 export type Business = {
     timestamp?: string;
     name: string;
@@ -30,8 +32,11 @@ const BusinessCard = (props: { business: Business }) => {
         verified,
     } = props.business;
     return <div className='business-card'>
-        <h3>{name}</h3>
-        <h4>{location}</h4>
+        <img className='business-card__image' src={imageUrl} />
+        <div className='business-card__description'>
+            <h4>{name}</h4>
+            <span>{location}</span>
+        </div>
     </div>
 };
 
@@ -49,7 +54,7 @@ class BusinessList extends React.Component<BusinessListProps> {
             businesses
         } = this.props;
         return (
-            <div className='business-list flex one center'>
+            <div className='business-list flex one three-800'>
                 {businesses.map((business) => (
                     <BusinessCard
                         business={business}

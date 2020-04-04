@@ -11,7 +11,7 @@ export const Landing = () => (
                     In times of crisis, a community must come together. Although, it's challenging to determine which asks for help are truly genuine. That's why we've curated a list of verified local businesses that need help now. Donate to our community fund or find a specific business below.
                 </span>
             </div>
-            <div className='full third-600 off-third-600'>
+            <div className='full third-600 off-fourth-600'>
                 <PaymentMaker />
             </div>
         </div>
