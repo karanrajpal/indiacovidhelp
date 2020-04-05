@@ -5,16 +5,21 @@
     line-height: 1.2em;
 }
 
-.landing-page {
+.landing-page, .detail-page {
+    section.navigation {
+        background-color: #2b38e1;
+        padding: 18px 70px;
+    }
+
     section.opening {
         background-color: #2b38e1;
-        padding: 70px 70px 240px;
-        // min-height: auto;
+        padding: 18px 70px 240px;
     
         @media screen and (max-width: 600px) {
             padding: 35px;
         }
     }
+
     section.main {
         padding: 70px 70px 240px;
 
@@ -26,7 +31,6 @@
 
 .landing {
     color: white;
-    // max-width: 1080px;
 
     &__content {
         align-items: center;

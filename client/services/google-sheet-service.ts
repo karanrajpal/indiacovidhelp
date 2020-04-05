@@ -60,22 +60,36 @@ class GoogleSheetService {
         }
         console.log(table);
         const businesses: Business[] = table.map((row) => {
+            // Fields from the spreadsheet
+            const timestamp = row[this.fieldToColumnNumberMapping.timestamp];
+            const name = row[this.fieldToColumnNumberMapping.name];
+            const location = row[this.fieldToColumnNumberMapping.location];
+            const ownerName = row[this.fieldToColumnNumberMapping.ownerName];
+            const email = row[this.fieldToColumnNumberMapping.email];
+            const phoneNumber = row[this.fieldToColumnNumberMapping.phoneNumber];
+            const description = row[this.fieldToColumnNumberMapping.description];
+            const links = row[this.fieldToColumnNumberMapping.links];
             const imageUrl = row[this.fieldToColumnNumberMapping.imageUrl];
+            const verified = row[this.fieldToColumnNumberMapping.verified];
+
+            // Deriveds fields
+            const uniqueId = `${name.toLowerCase().replace(/ /g, '-')}-${location.toLowerCase().replace(/ /g, '-')}`;
             const formattedImageUrl = imageUrl
                 ? `https://drive.google.com/uc?export=view&id=${imageUrl.split('id=')[1]}`
                 : 'https://i.pinimg.com/originals/f3/9d/63/f39d634a99a22f2960c6cc92f47a6eff.jpg';
             return {
-                timestamp: row[this.fieldToColumnNumberMapping.timestamp],
-                name: row[this.fieldToColumnNumberMapping.name],
-                location: row[this.fieldToColumnNumberMapping.location],
-                ownerName: row[this.fieldToColumnNumberMapping.ownerName],
-                email: row[this.fieldToColumnNumberMapping.email],
-                phoneNumber: row[this.fieldToColumnNumberMapping.phoneNumber],
-                description: row[this.fieldToColumnNumberMapping.description],
-                links: row[this.fieldToColumnNumberMapping.links],
+                timestamp,
+                name,
+                location,
+                ownerName,
+                email,
+                phoneNumber,
+                description,
+                links,
                 imageUrl: formattedImageUrl,
-                verified: row[this.fieldToColumnNumberMapping.verified],
-            }
+                verified,
+                uniqueId,
+            };
         });
         return businesses;
     }

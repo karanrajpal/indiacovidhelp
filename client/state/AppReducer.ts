@@ -4,7 +4,7 @@
  */
 import {isType} from 'typescript-fsa';
 import {
-    setRandomBoolean,
+    setSelectedBusinessId,
     setBusinesses,
 } from './actions';
 import { Action } from 'redux';
@@ -12,26 +12,26 @@ import { Business } from '../components/BusinessList';
 
 export type AppReducerType = {
     businesses: Business[];
-    randomBoolean: boolean;
+    selectedBusinessId: string;
 };
 
 export const initialState: AppReducerType = {
     businesses: [],
-    randomBoolean: false,
+    selectedBusinessId: null,
 };
 
 // Define and export reducer
-const AppReducer = (state = initialState, action: Action) => {
+const AppReducer = (state = initialState, action: Action): AppReducerType => {
     if (isType(action, setBusinesses)) {
         return {
             ...state,
             businesses: action.payload.businesses,
         };
     }
-    if (isType(action, setRandomBoolean)) {
+    if (isType(action, setSelectedBusinessId)) {
         return {
             ...state,
-            randomBoolean: action.payload.randomBoolean,
+            selectedBusinessId: action.payload.selectedBusinessId,
         };
     }
     return state;

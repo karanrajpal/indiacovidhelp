@@ -16,6 +16,7 @@ export type Business = {
     links: string[];
     imageUrl: string;
     verified: boolean;
+    uniqueId: string;
 };
 
 const BusinessCard = (props: { business: Business }) => {
@@ -30,14 +31,17 @@ const BusinessCard = (props: { business: Business }) => {
         links,
         imageUrl,
         verified,
+        uniqueId,
     } = props.business;
-    return <div className='business-card'>
-        <img className='business-card__image' src={imageUrl} />
-        <div className='business-card__description'>
-            <h4>{name}</h4>
-            <span>{location}</span>
+    return <Link to={`/business/${uniqueId}`}>
+        <div className='business-card'>
+            <img className='business-card__image' src={imageUrl} />
+            <div className='business-card__description'>
+                <h4>{name}</h4>
+                <span>{location}</span>
+            </div>
         </div>
-    </div>
+    </Link>
 };
 
 type BusinessListProps = {

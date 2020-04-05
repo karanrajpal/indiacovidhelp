@@ -4,9 +4,9 @@
  */
 import actionCreatorFactory from 'typescript-fsa';
 
-import { Business } from '../components/LandingPage';
+import { Business } from '../components/BusinessList';
  
 const actionCreator = actionCreatorFactory();
 
 export const setBusinesses = actionCreator<{ businesses: Business[] }>('SET_BUSINESSES');
-export const setRandomBoolean = actionCreator<{ randomBoolean: boolean }>('SET_RANDOM_BOOLEAN');
+export const setSelectedBusinessId = actionCreator<{ selectedBusinessId: string }>('SET_SELECTED_BUSINESS_ID');
