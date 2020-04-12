@@ -20,7 +20,7 @@ export const Landing = () => (
                     <li>Nominate a business in your area by clicking here. Simply add their Google Pay number or bank details and get people to send funds DIRECTLY to their bank account.</li>
                     <li>Donate and spread the word by sharing the link. </li>
                     </ol>
-THAT'S IT. 
+                    THAT'S IT. 
                 </span>
                 {/* <PaymentMaker /> */}
             </div>
