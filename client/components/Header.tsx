@@ -6,7 +6,7 @@ export const Header = () => (
     <nav className='header'>
         <a href="#" className="brand">
             {/* <img className="logo" src="/img/basket.png" /> */}
-            <span>HelpLocalBiz</span>
+            <span>LOCAL BUSINESS SOS</span>
         </a>
 
         <input id="bmenub" type="checkbox" className="show" />

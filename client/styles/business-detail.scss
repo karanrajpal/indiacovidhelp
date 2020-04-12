@@ -5,6 +5,10 @@
         height: 400px;
         border: 1px solid #550033;
         color: #550033;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 15px;
+        }
     }
 
     &__description-header {

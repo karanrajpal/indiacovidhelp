@@ -36,27 +36,27 @@ const BusinessDetail = (props: { business: Business, className?: string }) => {
                     {
                         phoneNumber && <a href="https://paytm.com" className='business-detail__payment-option flex two'>
                             <span className='business-detail__paytm third'><img src='https://upload.wikimedia.org/wikipedia/commons/4/42/Paytm_logo.png' alt='PayTM' /></span>
-                                <span className='business-detail__number two-third'>{phoneNumber}</span>
+                            <span className='business-detail__number two-third'>{phoneNumber}</span>
                         </a>
                     }
                 </div>
             </div>
-            </div>
-            <div className='business-detail__image-box'>
-                <img className='business-detail__image' src={imageUrl} />
-            </div>
         </div>
+        <div className='business-detail__image-box'>
+            <img className='business-detail__image' src={imageUrl} />
+        </div>
+    </div>
 };
 
 type BusinessDetailPageProps = {
-            selectedBusiness: Business;
+    selectedBusiness: Business;
     match: any;
     setSelectedBusinessId: (businesses: Business[]) => {};
 };
 
 class BusinessDetailPage extends React.Component<BusinessDetailPageProps> {
-            constructor(private props: BusinessDetailPageProps) {
-                super(props);
+    constructor(private props: BusinessDetailPageProps) {
+        super(props);
     }
 
     componentDidMount() {
@@ -67,8 +67,8 @@ class BusinessDetailPage extends React.Component<BusinessDetailPageProps> {
 
     render() {
         const {
-                selectedBusiness
-            } = this.props;
+            selectedBusiness
+        } = this.props;
 
         return (
             <div className='detail-page flex one center'>
@@ -87,11 +87,11 @@ class BusinessDetailPage extends React.Component<BusinessDetailPageProps> {
 
 export const ConnectedBusinessDetailPage = connect(
     (state: AppReducerType) => ({
-                selectedBusiness: state.businesses.find((business) => business.uniqueId === state.selectedBusinessId),
+        selectedBusiness: state.businesses.find((business) => business.uniqueId === state.selectedBusinessId),
     }),
     (dispatch) => ({
-                setSelectedBusinessId: (selectedBusinessId: string) => {
-                dispatch(setSelectedBusinessId({ selectedBusinessId }));
+        setSelectedBusinessId: (selectedBusinessId: string) => {
+            dispatch(setSelectedBusinessId({ selectedBusinessId }));
         },
     })
 )(BusinessDetailPage);
